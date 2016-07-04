@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<!-- hammer.js controls the slidshow swipe -->
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+<script type="text/javascript" src="../js/modules.js"></script>
+
+</head>
+
+<body id="home">
+
+<div class="diy-slideshow">
+
+<span class="prev">&laquo;</span>
+  <span class="next">&raquo;</span>
+
+	<figure id="fig" class="show">
+        <a href=""><img src="../assets/learnsprout.jpg" width="100%" /></a><figcaption>1 of 5</figcaption> 
+    <div id="labelcontbe">
+		<span id="allbtn" class="fa fa-list-ul" onclick=""></span><div id="label" class="label">LEARN: BOTANY & ENVIRONMENT</div><i id="morebtn" class="fa fa-refresh" onclick=""></i>
+	</div>
+	<div id="modulecont">
+		<div id="moduletitle" class="moduletitle">The Lives of Plants</div>
+		<div id="moduleblurb" class="moduleblurb">Immerse yourself in the garden and learn about the fascinating ways plants and trees work (15 min.)</div>
+	</div>
+	</figure>
+	
+    
+	<figure>
+    <img src="../assets/learnpg.jpg" width="100%;" />
+    <figcaption>2 of 5</figcaption> 
+    <div id="labelcontad">
+		<span id="allbtn" class="fa fa-list-ul" onclick=""></span><div id="label" class="label">LEARN: ART & DESIGN</div><i id="morebtn" class="fa fa-refresh" onclick=""></i>	
+		</div>
+    <a href="learnpaintinggardens.html">
+		<div id="modulecont">
+			<div id="moduletitle" class="moduletitle">Painting Gardens</div>
+			<div id="moduleblurb" class="moduleblurb">See how gardens were painted in the art of the Islamic  World</div>
+		</div>
+     </a>
+	</figure>
+    
+	<figure>
+        <img src="../assets/learnbayad.jpg" width="100%" /><figcaption>3 of 5</figcaption> 
+      <div id="labelcontmp">
+		<span id="allbtn" class="fa fa-list-ul" onclick=""></span><div id="label" class="label">LEARN: MUSIC, POETRY & SOUND</div><i id="morebtn" class="fa fa-refresh" onclick=""></i>	
+		</div>
+    <a href="">
+		<div id="modulecont">
+			<div id="moduletitle" class="moduletitle">Music & Gardens</div>
+			<div id="moduleblurb" class="moduleblurb">Find out about how gardens were popular venues for musical performances</div>
+		</div>
+  </a>
+	</figure>
+  
+	<figure>
+        <img src="../assets/learnjesuits.jpg" width="100%" /><figcaption>4 of 5</figcaption> 
+    <div id="labelcontiu">
+		<span id="allbtn" class="fa fa-list-ul" onclick=""></span><div id="label" class="label">LEARN: INTERCULTURAL UNDERSTANDING</div><i id="morebtn" class="fa fa-refresh" onclick=""></i>	
+		</div>
+    <a href="">
+		<div id="modulecont">
+			<div id="moduletitle" class="moduletitle">Stories of Compassion</div>
+			<div id="moduleblurb" class="moduleblurb">Discover stories of compassion and understanding from literature of the Islamic world</div>
+		</div>
+  </a>
+		</figure>
+	
+<figure>
+  
+        <img src="../assets/learnpg.jpg" width="100%"/><figcaption>4 of 5</figcaption> 
+    <div id="labelcontiu">
+    <span id="allbtn" class="fa fa-list-ul" onclick=""></span><div id="label" class="label">LEARN: ART & DESIGN</div><i id="morebtn" class="fa fa-refresh" onclick=""></i> 
+    </div>
+    <a href="learnhumay.html">
+    <div id="modulecont">
+      <div id="moduletitle" class="moduletitle">Lovers' Meeting</div>
+      <div id="moduleblurb" class="moduleblurb">Learn about Humay and Humayun's tryst</div>
+    </div>
+  </a>
+    </figure>
+
+
+
+ </div> 
+
+  <div id="container">
+  <div id="menubar">
+  <span id="homebtn" class="fa fa-home" onclick="home()"></span>
+  <span id="mapbtn" class="fa fa-map-marker"></span>
+  <span id="fsbtn" class="fa fa-arrows-alt" onclick="toggleFullScreen()"></span>
+  <span id="menubtn" class="fa fa-bars" onclick="dropdown()"></span>
+  <div id="myDropdown" class="dropdown-content">
+    <a onclick="search()">SEARCH</a>
+    <a onclick="about()">ABOUT</a>
+    <a onclick="garden()">THE GARDEN</a>
+  <a onclick="contact()">CONTACT</a>
+  </div>
+  </div>
+  </div>
+<script>
+
+// runs the slideshow. Slideshow template by Mark Lee @therealmarklee
+(function(){
+
+var counter = 0, // to keep track of current slide
+    $items = document.querySelectorAll('.diy-slideshow figure'), // a collection of all of the slides, caching for performance
+    numItems = $items.length; // total number of slides
+
+// this function is what cycles the slides, showing the next or previous slide and hiding all the others
+var showCurrent = function(){
+  var itemToShow = Math.abs(counter%numItems);// uses remainder (aka modulo) operator to get the actual index of the element to show  
+  
+  // remove .show from whichever element currently has it 
+  // http://stackoverflow.com/a/16053538/2006057
+  [].forEach.call( $items, function(el){
+    el.classList.remove('show');
+  });
+  
+  // add .show to the one item that's supposed to have it
+  $items[itemToShow].classList.add('show');    
+};
+
+// add click events to prev & next buttons 
+document.querySelector('.next').addEventListener('click', function() {
+     counter++;
+     showCurrent();
+  }, false);
+
+document.querySelector('.prev').addEventListener('click', function() {
+     counter--;
+     showCurrent();
+  }, false);
+
+    var fig = document.getElementById('fig');
+        /* create new hammerjs object */
+    var ht = new Hammer(fig);
+    /* add listener for 'swiperight' event */ 
+    ht.on("swiperight", function(e) {
+        /* decrement & show */
+    counter--;
+        showCurrent(-1); 
+    }, false);
+    /* add listener for 'swipeleft' event */
+    ht.on('swipeleft', function(e) {
+        /* increment & show */
+    counter++;
+        showCurrent(1);
+    }, false);
+  
+})();
+</script>
+
+
+
+</body>
+</html>
