@@ -18,9 +18,9 @@
     <td colspan="3" class="title">The Contemporary Islamic Garden</td>
   </tr>
 <tr>
-<td class="font"><div id="tourbtn" onclick="template()">TOUR</div></td>
+<td class="font"><div id="tourbtn" onclick="tour()">TOUR</div></td>
 <td><div id="vertical1" class="vertical"></div></td>
-<td class="font"><div>PLAY</div></td>
+<td class="font" onclick="play()"><div>PLAY</div></td>
 </tr>
 <tr>
 <td align="right"><div id="horizontal1"></div></td>
@@ -31,10 +31,10 @@
 <tr>
 <td class="font"><div id="learnbtn" onclick="learn()">LEARN</div></td>
 <td><div id="vertical2" class="vertical"></div></td>
-<td class="font"><div>REFLECT</div></td>
+<td class="font" onclick="reflect()"><div>REFLECT</div></td>
 </tr>
 <tr>
-    <td colspan="3" class="font"><div>QUESTION</div></td>
+    <td colspan="3" class="font" onclick="question()"><div>QUESTION</div></td>
   </tr>
 </table>
 
@@ -44,7 +44,7 @@
  <div id="container">
   <div id="menubar">
   <span id="homebtn" class="fa fa-home" onclick="home()"></span>
-  <span id="mapbtn" class="fa fa-map-marker"></span>
+  <span id="mapbtn" class="fa fa-map-marker" onclick="mapOfGarden()"></span>
   <span id="fsbtn" class="fa fa-arrows-alt" onclick="toggleFullScreen()"></span>
   <span id="menubtn" class="fa fa-bars" onclick="dropdown()"></span>
   <div id="myDropdown" class="dropdown-content">

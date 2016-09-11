@@ -155,13 +155,42 @@ function parseNewKML(url)
 
 
 function startGPS()
-	{
+{
+
+
+	//this function does more than start the GPS.
+	//calling watchPosition means it is constantly updating the users postion.
+
+	function geo_success(position){
+
+
+		//this gets called everytime the gps updates the users position.
+
+		currentUserCoordinates = position.coords;
+
+
+
+	};
+
+	function geo_error(err){
+
+		//this gets called if there is a problem updating the users position
+
+		console.log(err);
+		alert("There was an error monitoring your coordinates.");
+
+	};
+
+
+
 	if(!!navigator.geolocation)
 		{
-		alert("Booting up GPS");
-		//setTimeout(function () {
-		wpid=navigator.geolocation.watchPosition(geo_success, geo_error, {enableHighAccuracy:true, maximumAge:30000, timeout:27000});
-		//	}, 100);
+			alert("Booting up GPS");
+			//setTimeout(function () {
+
+			//TODO define geo_success, geo_error 
+			wpid=navigator.geolocation.watchPosition(geo_success, geo_error, {enableHighAccuracy:true, maximumAge:30000, timeout:27000});
+			//	}, 100);
 		}
 	else
 		{
@@ -199,6 +228,7 @@ function compare()
 		for (var i in allCoordinatesArray)
 			{
 			//alert("!!checking point in polygon for polygon "+i);
+			//is this supposed to be window.isPointInPoly or is it supposed to be only isPointInPoly -Boyan
 			if(window.isPointInPoly(allCoordinatesArray[i],currentUserCoordinates))
 				{
 				lastFoundPlacemark = i;
@@ -218,7 +248,6 @@ function compare()
 	}	
 
 
-
 // When the DOM of the parent document is fully complete, jquery runs this function. This runs before init().
 $(document).ready(function(){
 	alert("Document is ready\n");
@@ -226,9 +255,37 @@ $(document).ready(function(){
 	// Load KML (and extract allCoordinatesArray from it)
 	// window.url = gup('url');
 	// window.allCoordinatesArray = parseNewKML(window.url);
+
+	//TODO there are cross origin requests errors because we are not hosting the site anywhere. 
+	// I need to ask If i should just test it out and host it somewhere.
+	//Same thing with getting the gps location. the browser is worried about security risks so it won't give you gps coordinates.
+
 	window.url = "map.kml";
 	allCoordinatesArray = parseNewKML(window.url);
-	
+
+	//Does parseNewKML return a value??
+
+
+
+
+
+	//ignore this stuff
+
+	/*console.log(allCoordinatesArray);
+	navigator.geolocation.getCurrentPosition(function(pos){
+
+		console.log(pos);
+
+
+
+
+
+	},function(error){
+
+		console.log(error);
+
+	});
+	*/
 	
 	}); // einde van de compare ready function van jquery.
 

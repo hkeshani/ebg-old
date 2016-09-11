@@ -39,7 +39,15 @@ function garden() {
 };
 
 function contact() {
-  location.href = "http://www.devonian.ualberta.ca/en/ContactUs.aspx";
+  location.href = "http://devonian.ualberta.ca/Contact-Us";
+};
+
+function mapOfGarden(){
+
+  //TODO on map pin click
+  alert("button is not yet implemented");
+
+
 };
 
 // js for index.html
@@ -47,6 +55,31 @@ function contact() {
 function learn() {
     location.href = "menulearn.html","_self";
 }
+
+function play(){
+
+  location.href = "menuplay.html","_self";
+
+};
+
+function tour(){
+
+  location.href = "menutour.html","_self";
+
+};
+
+function reflect(){
+
+  location.href ="menureflect.html","_self";
+
+
+};
+
+function question(){
+
+  location.href ="menuquestion.html";
+
+};
 
 // revise this function to point to the new module menu.
 function template() {
