@@ -260,7 +260,7 @@ $(document).ready(function(){
 	// I need to ask If i should just test it out and host it somewhere.
 	//Same thing with getting the gps location. the browser is worried about security risks so it won't give you gps coordinates.
 
-	window.url = "map.kml";
+	window.url = "assets/map.kml";
 	allCoordinatesArray = parseNewKML(window.url);
 
 	//Does parseNewKML return a value??
