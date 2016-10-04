@@ -22,32 +22,8 @@ var nearestPlacemark;
 
 var start_stop_btn, wpid=false, map, z, op, prev_lat, prev_long, min_speed=0, max_speed=0, min_altitude=0, max_altitude=0;
 distance_travelled=0, min_accuracy=150, date_pos_updated="", info_string="";
-
-<<<<<<< HEAD
 var currentUserCoordinates;
-=======
-var index = 0;
 
-function coordinatePair(x, y) {
-    this.x = x;
-    this.y = y;
-}  
-//	coordinatePair.prototype.show = function() {
-//		alert(this.x + ': ' + this.y);
-//	}
-
-var currentUserCoordinates = new coordinatePair(0,0);
->>>>>>> dc1125d3818a8f98cb6e8ee3435a882a6a20748c
-
-
-
-//var currentUserCoordinates = new coordinatePair(1,1); 
-//currentUserCoordinates.show();
-
-//function placemark(name, description) {
-//   this.name = name;
-//   this.description = description;
-//}
 
 
 function user(x,y,inPlacemark,currentPlacemark){
@@ -74,7 +50,7 @@ function isPointInPoly(poly, pt)
 }
 
 
-<<<<<<< HEAD
+
 function NearestPlacemarkToUser(userCoords, placemarkArray ){
 
     //With this function you need just 1 set of coordinates per placemark 
@@ -129,21 +105,6 @@ function NearestPlacemarkToUser(userCoords, placemarkArray ){
 	}
     }
     return nearestPlacemark;
-
-=======
-function isUserNearPlacemark(userCoords, allCoordinatesArray ){
-
-    //we can check the lattitude and longitude of the user here
-    //against the coordinates of the placemarks
-    //we can check circumference around the placermarks 
-    // i think this way will be cleaner than storing a bunch of coordinates per placemark
-    //in the kml
-    // we can create polygons if we want around the coordinates of the placemarks rather than storing them. 
-
-
->>>>>>> dc1125d3818a8f98cb6e8ee3435a882a6a20748c
-
-}
 
 
 // This function scrapes parameter data from the browser's URL string.
