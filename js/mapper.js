@@ -23,7 +23,21 @@ var nearestPlacemark;
 var start_stop_btn, wpid=false, map, z, op, prev_lat, prev_long, min_speed=0, max_speed=0, min_altitude=0, max_altitude=0;
 distance_travelled=0, min_accuracy=150, date_pos_updated="", info_string="";
 
+<<<<<<< HEAD
 var currentUserCoordinates;
+=======
+var index = 0;
+
+function coordinatePair(x, y) {
+    this.x = x;
+    this.y = y;
+}  
+//	coordinatePair.prototype.show = function() {
+//		alert(this.x + ': ' + this.y);
+//	}
+
+var currentUserCoordinates = new coordinatePair(0,0);
+>>>>>>> dc1125d3818a8f98cb6e8ee3435a882a6a20748c
 
 
 
@@ -60,6 +74,7 @@ function isPointInPoly(poly, pt)
 }
 
 
+<<<<<<< HEAD
 function NearestPlacemarkToUser(userCoords, placemarkArray ){
 
     //With this function you need just 1 set of coordinates per placemark 
@@ -115,6 +130,18 @@ function NearestPlacemarkToUser(userCoords, placemarkArray ){
     }
     return nearestPlacemark;
 
+=======
+function isUserNearPlacemark(userCoords, allCoordinatesArray ){
+
+    //we can check the lattitude and longitude of the user here
+    //against the coordinates of the placemarks
+    //we can check circumference around the placermarks 
+    // i think this way will be cleaner than storing a bunch of coordinates per placemark
+    //in the kml
+    // we can create polygons if we want around the coordinates of the placemarks rather than storing them. 
+
+
+>>>>>>> dc1125d3818a8f98cb6e8ee3435a882a6a20748c
 
 }
 
@@ -156,6 +183,7 @@ function parseNewKML(url)
 	if (xmlhttp.readyState==4 && xmlhttp.status==200)
 	{
 	    kml = xmlhttp.responseXML;
+<<<<<<< HEAD
 	    var listOfPlacemarks = kml.getElementsByTagName("Placemark");
 	    console.log(listOfPlacemarks);
 	    alert("Number of placemarks found: " + listOfPlacemarks.length);
@@ -197,10 +225,11 @@ function startGPS()
     //this function does more than start the GPS.
     //calling watchPosition means it is constantly updating the users postion.
 
+
     function geo_success(position){
+	//this gets called everytime the gps updates the users position.
 
-
-	//TODO fix thise. 
+	currentUserCoordinates = position.coords;
 
 
 	currentUserCoordinates = position.coords;
@@ -224,8 +253,6 @@ function startGPS()
 
     if(navigator.geolocation)
     {
-	
-	//TODO define geo_success, geo_error 
 	wpid=navigator.geolocation.watchPosition(geo_success, geo_error, {enableHighAccuracy:true, maximumAge:30000, timeout:27000});
     }
     else
@@ -241,23 +268,70 @@ function display(name,description){
     document.getElementById('displayDescription').innerHTML = description;
 }
 
+// This functions compares the KML data to the user's current position.
+function compare(){
+    //according to the parameters we dont compare anything 
+    
+    alert("Comparing user location to KML data");
+    //alert(dump(allCoordinatesArray));
+    //alert(dump(currentUserCoordinates));	
+    
+    if (window.kml)
+    {
+
+	var lastFoundPlacemark = -1;
+	//why are we reseting lastFoundPlacemark everytime we compare? 
+
+	document.getElementById('currentpos').innerHTML = dump(currentUserCoordinates);
+
+	counter++;
+	document.getElementById('counter').innerHTML = window.counter;
+	
+	//isUserInPlacemark(window.allCoordinatesArray, window.currentUserCoordinates);
+	//lastFoundPlacemark = isUserInPlacemark(window.allCoordinatesArray, window.currentUserCoordinates);
+	
+
+	for (var i in allCoordinatesArray)
+	{
+	    //alert("!!checking point in polygon for polygon "+i);
+	    //is this supposed to be window.isPointInPoly or is it supposed to be only isPointInPoly -Boyan
+	    if(isPointInPoly(allCoordinatesArray[i],currentUserCoordinates))
+	    {
+		lastFoundPlacemark = i;
+	    }
+	}
+
+	alert("The number of the last found placemark: "+lastFoundPlacemark);
+	
+	if (lastFoundPlacemark != -1)
+	{
+	    //window.placemarksDOM=xmlDoc.getElementsByTagName("Placemark");
+	    var description=placemarksDOM[lastFoundPlacemark].getElementsByTagName("description");
+	    var name=placemarksDOM[lastFoundPlacemark].getElementsByTagName("name");
+	    display(name[0].firstChild.nodeValue, description[0].firstChild.nodeValue);
+	}	
+    }
+}	
 
 
 // When the DOM of the parent document is fully complete, jquery runs this function. This runs before init().
 $(document).ready(function(){
-    
+
     // Load KML (and extract allCoordinatesArray from it)
     // window.url = gup('url');
     // window.allCoordinatesArray = parseNewKML(window.url);
-
-    //TODO there are cross origin requests errors because we are not hosting the site anywhere. 
-    // I need to ask If i should just test it out and host it somewhere.
-    //Same thing with getting the gps location. the browser is worried about security risks so it won't give you gps coordinates.
 
     url = "/assets/map.kml";
     //allCoordinatesArray = parseNewKML(window.url);
     parseNewKML(url);
 
+    //Does parseNewKML return a value??
+
+
+
+    url = "/assets/map.kml";
+    //allCoordinatesArray = parseNewKML(window.url);
+    parseNewKML(url);
 
     
 }); // einde van de compare ready function van jquery.
