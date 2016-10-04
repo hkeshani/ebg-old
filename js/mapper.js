@@ -144,7 +144,6 @@ function parseNewKML(url)
 	if (xmlhttp.readyState==4 && xmlhttp.status==200)
 	{
 	    kml = xmlhttp.responseXML;
-<<<<<<< HEAD
 	    var listOfPlacemarks = kml.getElementsByTagName("Placemark");
 	    console.log(listOfPlacemarks);
 	    alert("Number of placemarks found: " + listOfPlacemarks.length);
