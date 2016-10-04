@@ -40,7 +40,7 @@
 		<name>Lake Country 1</name>
 		<open>1</open>
 		<Placemark>
-			<name>FOUND SOMETHING!</name>
+			<name>Boyan's House</name>
 <description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
 <a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
 			<styleUrl>#msn_ylw-pushpin</styleUrl>
@@ -49,14 +49,14 @@
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-					40.7127837     ,            -74.00594130000002
+					53.462620, -113.597698
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Lake Country 1</name>
+			<name>Comp Sci Building</name>
 			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
 <a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
 			<styleUrl>#msn_ylw-pushpin</styleUrl>
@@ -65,12 +65,52 @@
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							53.5232189,-113.52631859999997
+							53.526769, -113.527151
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
 			</Polygon>
 		</Placemark>
+		<name>CCIS </name>
+			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
+<a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							53.528060, -113.52569651
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		
+		<name>Old Arts Building </name>
+			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
+<a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							53.526614, -113.522577
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	</Folder>
 </Document>
 </kml>
