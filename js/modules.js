@@ -70,7 +70,7 @@ function tour(){
 
 function reflect(){
 
-  location.href ="menureflect.html","_self";
+  location.href ="reflect.html","_self";
 
 
 };
