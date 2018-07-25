@@ -1,0 +1,21 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\ri720\sl360\slmult1\partightenfactor0
+
+\f0\b\fs24 \cf0 TARONA 3\
+\
+\pard\pardeftab720\ri720\sl360\slmult1\partightenfactor0
+
+\b0 \cf0 Dar kishvari husnu vafo, ey mohi kan'on\'ee biy\'e2\
+Man zarrayi sargashtaam, xurshedi tobon\'ee, biy\'e2 \
+Hamchun shifobaxsh az karam po neh ba s\'fbyi kulbaam,\
+Bemoram az ishq, ey sanam, bar dard darmon\'ee, biy\'e2\
+Tu raft\'ee, ey gulpirahan, shud kulbaam baytulhazan,\
+Chun jon daro dar mulki tan, ey moh, pinhoni biy\'e2!\
+Chavvosi bahri dil shudam, gauhar nay\'e2mad bar kafam,\
+Tang ast xilvatxonaam, ry moh, pinhon\'ee biy\'e2\
+}

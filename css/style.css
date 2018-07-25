@@ -416,3 +416,11 @@ figure.show{
   border-bottom-right-radius: 3px;
   border: 0px solid red;
 }
+
+.trackDesc {
+
+    text-align:center;
+    margin-left:2em;
+    
+
+}

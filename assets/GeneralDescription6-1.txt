@@ -1,0 +1,13 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl360\slmult1\partightenfactor0
+
+\f0\b\fs24 \cf2 \expnd0\expndtw0\kerning0
+Bardasht\
+\pard\pardeftab720\sl360\slmult1\partightenfactor0
+
+\b0 \cf2 Bardasht (from Persian \'93summing up\'94) is a generic compositional form that serves as a short overture to a mugham suite. This lively bardasht begins with a rhythmic instrumental introduction that prepares the dramatic, high-register entrance of the vocalists with the signature melodic interval of chargah: an upward leap from la to do (la is slightly flattened). Alim and Fargana Qasimov render the opening verses of Shirvani\'92s ghazal antiphonally in free rhythm over an embellished drone provided by the kamancha, tar, and balaban. The final four lines of Bardasht gradually descend a full octave to the initial pitch of the subsequent piece, Maye.}

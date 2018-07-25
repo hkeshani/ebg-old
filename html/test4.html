@@ -1,0 +1,148 @@
+<html>
+
+<head>
+<title>test4</title>
+<script >
+
+
+window.onload = function(){
+
+
+//
+// var url = 'https://islamicgarden.ualberta.ca/flask/assets/Valley3.txt'
+//
+// function getDescriptionFromTextFile(textFileURL){
+//
+//
+//     if (window.XMLHttpRequest)
+//     {// code for IE7+, Firefox, Chrome, Opera, Safari
+//         xmlhttp=new XMLHttpRequest();
+//     }
+//     else
+//     {// code for IE6, IE5
+//         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+//     }
+//     xmlhttp.onreadystatechange=function()
+//     {
+//         if (xmlhttp.readyState==4 && xmlhttp.status==200)
+//         {
+//             return xmlhttp.responseText;
+//         }
+//     }
+//     xmlhttp.open("GET", textFileURL, false );
+//     xmlhttp.send();
+//
+//     var description = xmlhttp.responseText;
+//
+//     console.log('DESCRIPTION IS:----------------');
+//
+//     console.log(description);
+//
+function isPointInPoly(poly, pt)
+	{
+		//this doesn't work when it tries to look at negative values for longitude and/or lattitude
+		//I am trying to make them absolute values since in Edmonton  longitude is  negative.
+		console.log(poly);
+		var positivePoly = poly.map(function(coords){
+			//map the array inside of the array to have positive values
+			return coords.map(x=>Math.abs(x));;
+		});
+    for(var c = false, i = -1, l = poly.length, j = l - 1; ++i < l; j = i)
+        ((positivePoly[i][0] <= pt.latitude && pt.latitude < positivePoly[j][0]) || (positivePoly[j][0] <= pt.latitude && pt.latitude < positivePoly[i][0]))
+        && (pt.longitude < (positivePoly[j][1] - positivePoly[i][1]) * (pt.longitude - positivePoly[i][0]) / (positivePoly[j][0] - positivePoly[i][0]) + positivePoly[i][1])
+        && (c = !c);
+    return c;
+	}
+
+
+
+var polygon = [[53.4881477,-113.5461688],
+[53.4875413,-113.5459649],
+[53.4869859,-113.5465765],
+[53.4869986,-113.5430145],
+[53.4882498,-113.5429931],
+[53.4881477,-113.5461688]];
+
+var user = {latitude:53.487669,
+						longitude:-113.544251};
+
+
+console.log(isPointInPoly(polygon,user));
+
+function inside(point, vs) {
+    // ray-casting algorithm based on
+    // http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html
+
+    var x = point[0], y = point[1];
+
+    var inside = false;
+    for (var i = 0, j = vs.length - 1; i < vs.length; j = i++) {
+        var xi = vs[i][0], yi = vs[i][1];
+        var xj = vs[j][0], yj = vs[j][1];
+			//	console.log("xi: " + xi + " xj: " + xj);
+			//	console.log("yi: " + yi + " yj" + yj);
+        var intersect = ((yi > y) != (yj > y))
+            && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+				//console.log(intersect);
+        if (intersect) inside = !inside;
+    }
+
+    return inside;
+};
+
+
+// array of coordinates of each vertex of the polygon
+var result = isPointInPoly(polygon,[ 53.486820 , -113.544315]); // true
+
+//console.log(result);
+
+
+};
+
+
+// array of coordinates of each vertex of the polygon
+var polygon = [ [ 53.4881477, -113.5461688 ], [ 53.4875413, -113.5459649] , [ 53.4869859, -113.5430145 ], [ 53.4882498, -113.5429931 ] ,[53.4881477,-113.5461688],[-113.5461688,53.4881477]];
+console.log(polygon);
+var result1 = inside([ 53.487516, -113.544145], polygon); // true
+
+function inside(point, vs) {
+    // ray-casting algorithm based on
+    // http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html
+
+    var x = point[0], y = point[1];
+
+    var inside = false;
+    for (var i = 0, j = vs.length - 1; i < vs.length; j = i++) {
+        var xi = vs[i][0], yi = vs[i][1];
+        var xj = vs[j][0], yj = vs[j][1];
+
+        var intersect = ((yi > y) != (yj > y))
+            && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+        if (intersect) inside = !inside;
+    }
+
+    return inside;
+};
+
+
+console.log(result1);
+
+
+
+</script>
+</head>
+
+<body>
+
+<audio  src ='assets/silence.mp3' controls='true' autoplay loop>
+
+the audio
+
+</audio>
+
+
+
+</body>
+
+
+</html>

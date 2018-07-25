@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script type="text/javascript" src="js/mapper.js"></script>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 60%;
+        min-width:10em;
+        padding:2em;
+        padding-top:1em;
+        margin:1em;
+        width:60%;
+        margin-left:10%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+   
+    <script>
+      var map;
+      var userLocation;
+      function initMap() {
+
+      /*  map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: new google.maps.LatLng(53.526736,-113.521747),
+          mapTypeId: 'terrain'
+        });
+
+        // Create a <script> tag and set the USGS URL as the source.
+        var script = document.createElement('script');
+        // This example uses a local copy of the GeoJSON stored at
+        // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
+        script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+     */
+
+     var x =  setInterval(function(){
+
+      	if(farAwayPlacemarks.length > 0){
+
+      		populateMap();
+      		clearInterval(x);
+
+      	}
+
+
+
+      },2000);
+ }
+
+
+ var putUserOnMap = function (position){
+
+ 	var pos = position;
+
+
+ 	if(!userLocation){
+
+		userLocation = new google.maps.Marker({
+
+			position: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
+			map:map,
+			icon:'https://maps.gstatic.com/tactile/minimap/pegman-offscreen-1x.png',
+			shape:'circle',
+			fillColor:'blue',
+			fillOpacity:.6,
+			radius:1.5,
+			zIndex: 500,
+
+
+
+
+		});
+
+
+ 	}
+ 	else{
+
+
+ 		userLocation.setPosition(
+ 			new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude)
+ 				);
+
+
+ 	}
+
+
+
+
+ };
+
+
+var locError = function (error){
+
+	alert('error watching position....');
+	console.log(error);
+
+
+
+
+};
+
+
+ var populateMap = function(){
+
+ 	if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(putUserOnMap, locError);
+
+	 	var allPlacemarks = farAwayPlacemarks.concat(nearbyPlacemarks);
+	 	//console.log(allPlacemarks);
+	 	map = new google.maps.Map(document.getElementById('map'), {
+
+	 		zoom:18,
+	 		center: new google.maps.LatLng(53.526736,-113.521747),
+	 		mapTypeId: 'terrain'
+
+	 	});
+
+	 	for (var i = 0 ; i < allPlacemarks.length; i++){
+
+	 		console.log(allPlacemarks[i].name + ": " + allPlacemarks[i].latitude + ", " +  allPlacemarks[i].longitude);
+			var latLng = new google.maps.LatLng(allPlacemarks[i].latitude,allPlacemarks[i].longitude);
+			var marker = new google.maps.Marker({
+				position: latLng,
+				map: map
+			});
+
+
+
+	 	}
+	}
+ 	else{
+
+ 		alert("we can't find your location!");
+
+ 	}
+
+
+
+ };
+
+      // Loop through the results array and place a marker for each
+      // set of coordinates.
+     /* window.eqfeed_callback = function(results) {
+        for (var i = 0; i < results.features.length; i++) {
+          var coords = results.features[i].geometry.coordinates;
+          var latLng = new google.maps.LatLng(coords[1],coords[0]);
+          var marker = new google.maps.Marker({
+            position: latLng,
+            map: map
+          });
+        } */
+      	
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCXPzPrkW1-DAaLJpISWonUgO3j-_IkPI&callback=initMap">
+    </script>
+  </body>
+</html>

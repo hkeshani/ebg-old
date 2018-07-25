@@ -1,0 +1,244 @@
+#map{
+
+	height: 60%;
+	min-width:10em;
+	padding:2em;
+	padding-top:1em;
+	margin:1em;
+	width:60%;
+	margin-left:10%;
+	background-color:white;
+  	float:left;
+}
+
+
+
+#map-container{
+
+  margin:auto;
+	display:inline-block;
+
+
+}
+
+#map-legend{
+
+	float:right;
+	margin:1em;
+	border-style:solid;
+	border-color:black;
+	width:20em;
+	height:20em;
+	display:inline-block;
+
+}
+
+.list-columns{
+
+  list-style-type: none;
+  margin-left:-1em;
+  color:white;
+	display:inline-block;
+}
+.zone-colors{
+
+  width: 5em;
+  height:1.1em;
+  margin-bottom:0.38em;
+
+}
+li::before {content: "•"; color: rgba(255,0,0,0.0)}
+
+.zoneList{
+
+	margin-bottom:0.2em;
+
+
+}
+
+.intro{
+
+	position:static;
+	top:30em;
+	left:10em;
+	margin-left:5%;
+	padding:0.5em;
+	height:6em;
+}
+
+
+.locationAudioHolder{
+
+
+
+	margin-top:1%;
+	border-style:solid;
+	border-width:2px;
+	border-color:white;
+	background-color:black;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:1%;
+	overflow:hidden;
+	color:green;
+	padding:0.4em;
+	text-align:center;
+
+
+
+}
+
+
+.audioWrap{
+
+	/*display:flex;
+	flex-direction: row; */
+	margin-top:1%;
+	border-style:solid;
+	border-width:1px;
+	border-color:black;
+	background-color:black;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:5%;
+	overflow:hidden;
+	font-weight:120%;
+}
+
+audio {
+
+	margin-bottom:2%;
+
+}
+
+.audioWrap img{
+
+	height:13em;
+	width:8em;
+	margin-left:auto;
+	margin-right:auto;
+	display:inherit;
+
+
+}
+
+.placemarkTag{
+
+
+	margin-top:1%;
+	border-style:solid;
+	border-width:2px;
+	border-color:white;
+	background-color:black;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:1%;
+	overflow:hidden;
+	color:green;
+	padding:0.4em;
+	text-align:center;
+
+
+
+
+}
+
+.soloButton,.muteButton{
+	margin-left:3pt;
+	margin-right:3pt;
+	width:10vw;
+	font-weight:bold;
+	font-size:75%;
+	text-align:center;
+	overflow:hidden;
+	border-radius:0px;
+	border-width:0.1em;
+	border-style:solid;
+	border-color:white;
+	margin-bottom:2%;
+	min-width:5em;
+
+
+}
+
+.soloButton:hover,.muteButton:hover{
+
+	background-color:#5162e8; !important
+
+
+}
+
+p{
+	margin-left:5em;
+	width:50%;
+	color:white;
+	display:inline;
+
+}
+
+
+.start{
+
+	display:flex;
+	justify-content: center;
+  	align-items: center;
+	color:green;
+	font-weight:150%;
+	height:80%;
+	min-width:90%;
+
+
+}
+.startButton{
+
+	height:15em;
+	width:15em;
+	min-width:8em;
+	text-align: center;
+	color:white;
+	border-style: solid;
+	border-width:0.5em;
+	border-color:white;
+
+
+}
+
+.debug{
+
+	color:white;
+	font-weight:125%;
+
+}
+
+.infoWrapper{
+
+	display:flex;
+	flex-direction:column;
+	padding-top:3em;
+
+
+
+
+
+}
+
+.infoButton{
+
+	border-style: solid;
+	border-color:white;
+	border-width: 1px;
+	border-radius:0.25em;
+	margin:0.25em;
+	padding:0.1em;
+	min-width:5em;
+
+
+}
+
+
+.gainDisplay, .distanceDisplay{
+
+	color:white;
+
+
+}

@@ -1,0 +1,18 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\ri0\sl360\slmult1\partightenfactor0
+
+\f0\b\fs26 \cf0 Raga Yaman\
+\pard\pardeftab720\ri0\sl360\slmult1\partightenfactor0
+
+\b0\fs24 \cf0 In this distinctively Afghan type of classical composition, sometimes known\
+as naghma-ye chahartuk (four-part instrumental piece), or as lareh, Homayun and Toryalai\
+interpret raga yaman. Yaman, an evening raga, has the scale: C-D-E-F#-G-A-B-C (in Indian\
+sargam syllables: Sa-Re-Ge-Me-Pe-De-Ni-Sa). Such compositions are played as an overture to\
+an evening\'92s vocal performance of ghazals, and are also favored as solo instrumental pieces\
+for rub\'e2b, and for tanbur or dutar (Central Asian long-necked lutes).\
+}
