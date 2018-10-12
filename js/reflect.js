@@ -255,16 +255,16 @@ var ZONE_AMOUNT = 6;
 
 function initializeSounds(placemark , audioQueue){
 
-	var soundsEndpoint = "https://islamicgarden.ualberta.ca/flask/api/sounds?placemarkName=";
+	var soundsEndpoint = "https://islamicgarden.ualberta.ca/api.php?placemarkName=";
 	console.log(soundsEndpoint+placemark.name);
 	var audioList = [];
 	$.getJSON(soundsEndpoint+placemark.name,function(data){
 
 		audioList = [];
-			for(var i = 1; i < data.length;i++){
+			for(var i = 0; i < data.tracks.length;i++){
 
 
-				audioList.push(data[i]);
+				audioList.push(data.tracks[i]);
 				//console.log("GETTING DATA FROM SOUNDS ENDPOINT");
 				//console.log(data[i]);
 
@@ -322,8 +322,8 @@ function initializeSounds(placemark , audioQueue){
 				audioElement['gainNode'].gain.value=1;
 
 			}
-
-			sourceForTrack.src = audioList[i]['path'];
+			var realSource = audioList[i]['sound_path'].replace("/flask","");
+			sourceForTrack.src = realSource
 			audioElement.load();
 
 			audioElement.play();
@@ -362,7 +362,7 @@ var startFlag = false;
 
 
 var mapperCheck = setInterval(function(){
-
+	console.log("is mapper check happening at all?");
 	if(nearbyPlacemarks.length > 0){
 		console.log("YO");
 
@@ -373,6 +373,7 @@ var mapperCheck = setInterval(function(){
 	    }
 	    clearInterval(mapperCheck);
 	    startFlag=true;
+			console.log("is start happening?");
 	    start();
 
 
@@ -404,7 +405,7 @@ setInterval(function(){
 
 
 	if(startFlag){
-		gainChangeDueToDistance();
+		//gainChangeDueToDistance();
 
 	}
 
@@ -413,7 +414,7 @@ setInterval(function(){
 function start(){
 
 
-
+		console.log("function start() was called");
     var startButton = document.createElement("BUTTON");
 
     startButton.className = "startButton";
@@ -423,7 +424,7 @@ function start(){
 	startDiv.innerHTML = '';
 	startDiv.appendChild(startButton);
 	startButton.addEventListener("click",function(){
-
+		startGPS();
 		initializePage(audioPlayerQueue);
 		var allAudio = $("AUDIO");
 		for(i = 0 ; i < allAudio.length ; i++){
@@ -436,6 +437,9 @@ function start(){
 		this.parentNode.removeChild(this);
 		//remove start div. It's not longer required
 		startDiv.style.display='none';
+
+		var mapContainer = document.getElementById("map-container");
+		mapContainer.style.display='flex';
 
 	});
 
@@ -743,7 +747,7 @@ function initializePage(audioPlayerQueue){
 
 		userLocation = new google.maps.Marker({
 
-			position: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
+			position: new google.maps.LatLng(pos.latitude, pos.longitude),
 			map:map,
 			icon:{
 				//TODO check if this works
@@ -795,22 +799,31 @@ var locError = function (error){
 var createZoneSquare = function (ZoneCoords){
 
 	//first and last set of coords need to be the same to complete the drawing of the polygon.
-	var distance_from_center = 0.00015;
-	var zoneSquareCoords = [
+	if (ZoneCoords instanceof Array == false){
+
+		var distance_from_center = 0.00015;
+		var zoneSquareCoords = [
 
 
-		{lat:parseFloat(ZoneCoords[0]) - distance_from_center , lng:parseFloat(ZoneCoords[1]) - distance_from_center},
-		{lat: parseFloat(ZoneCoords[0]) + distance_from_center, lng: parseFloat(ZoneCoords[1]) - distance_from_center },
-		{lat: parseFloat(ZoneCoords[0]) + distance_from_center, lng: parseFloat(ZoneCoords[1]) + distance_from_center },
-		{lat: parseFloat(ZoneCoords[0]) - distance_from_center, lng: parseFloat(ZoneCoords[1]) + distance_from_center },
-		{lat: parseFloat(ZoneCoords[0]) - distance_from_center, lng: parseFloat(ZoneCoords[1]) - distance_from_center }
+			{lat:parseFloat(ZoneCoords.lat) - distance_from_center , lng:parseFloat(ZoneCoords.lng) - distance_from_center},
+			{lat: parseFloat(ZoneCoords.lat) + distance_from_center, lng: parseFloat(ZoneCoords.lng) - distance_from_center },
+			{lat: parseFloat(ZoneCoords.lat) + distance_from_center, lng: parseFloat(ZoneCoords.lng) + distance_from_center },
+			{lat: parseFloat(ZoneCoords.lat) - distance_from_center, lng: parseFloat(ZoneCoords.lng) + distance_from_center },
+			{lat: parseFloat(ZoneCoords.lat) - distance_from_center, lng: parseFloat(ZoneCoords.lng) - distance_from_center }
 
 
-	];
+		];
 
-	console.log(zoneSquareCoords);
+		//console.log(zoneSquareCoords);
 
-	return zoneSquareCoords;
+		return zoneSquareCoords;
+
+	}
+	else{
+
+		return ZoneCoords;
+	}
+
 }
 
 
@@ -880,20 +893,20 @@ for(var i =0 ; i < ZoneCoords.length; i++){
 
  	}
 
-	for(var i = 0 ; Zones.length; i++){
+	// for(var i = 0 ; Zones.length; i++){
+	//
+	//
+	//
+	// 	drawZoneOnMap(map,createZoneSquare(Zones[i].coordinateArray));
+	//
+	//
+	// }
 
-
-
-		//drawZoneOnMap(map,createZoneSquare(Zones[i].coordinateArray));
-
-
-	}
-
-	//putUserOnMap(currentUserCoordinates);
+	putUserOnMap(currentUserCoordinates);
 
  };
 
-//populateMap();
+populateMap();
 
 
 
