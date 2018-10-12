@@ -1,32 +1,30 @@
 #map{
 
+	margin:auto;
+	min-height:10em;
 	height: 60%;
 	min-width:10em;
-	padding:2em;
-	padding-top:1em;
-	margin:1em;
-	width:60%;
-	margin-left:10%;
+	width:60%;	
+	max-width:35em;
 	background-color:white;
-  	float:left;
+
+
 }
 
 
 
 #map-container{
 
-  margin:auto;
-	display:inline-block;
-
+	/*display:flex;*/
+	display:none;
 
 }
 
 #map-legend{
-
-	float:right;
-	margin:1em;
+	
+	margin:auto;
 	border-style:solid;
-	border-color:black;
+	border-color:lightgreen;
 	width:20em;
 	height:20em;
 	display:inline-block;
