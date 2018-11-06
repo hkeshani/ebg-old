@@ -1,0 +1,163 @@
+
+
+body {
+margin: 0;
+padding: 0;
+background: black;
+}
+
+#container {
+width: 100vw;
+height: 100vh;
+background-image: url("../assets/aspenleaf.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center center;
+}
+
+#menubar {
+position: fixed;
+top: 0vh;
+width: 100vw;
+height: 9vh;
+background: black;
+text-align: center;
+}
+
+#homebtn {
+	font-size: 6vh;
+	color: white;
+	text-align: center;
+	opacity: .3;
+	padding-top: 1.5vh;
+	padding-right: 4vh;
+    padding-left: 1vh;
+}
+
+#mapbtn {
+	font-size: 6vh;
+	color: white;
+	text-align: center;
+	opacity: .3;
+	padding-top: 1.5vh;
+	padding-right: 4vh;
+    padding-left: 4vh;
+}
+
+#fsbtn {
+	font-size: 6vh;
+	color: white;
+	text-align: center;
+	opacity: .3;
+	padding-top: 1.5vh;
+	padding-right: 4vh;
+    padding-left: 4vh;
+}
+
+#menubtn {
+	font-size: 6vh;
+	color: white;
+	text-align: center;
+	opacity: .3;
+	padding-top: 1.5vh;
+	padding-right: 1vh;
+    padding-left: 4vh;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+	top: 9vh;
+	right: 0vh;
+    background-color: black;
+    min-width: 160px;
+    overflow: auto;
+	opacity: .9;
+}
+
+.dropdown-content a {
+    color: white;
+	font-weight: bold;
+	font-family: "Verdana";
+	color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+background-color: gray
+}
+
+.show {
+display:block;
+}
+
+#tabledivcont {
+	position: fixed;
+	top: 9vh;
+	width: 100vw;
+	height: 100vh;
+	border: 0px solid red;
+	display: flex;
+	justify-content: center;
+}
+
+#tablediv {
+	width: 70vh;
+	border: 0px solid red;
+}
+
+td.title {
+	font-size: 6vh;
+	font-weight: light;
+	font-family: "Verdana";
+	color: white;
+	text-align: center;
+	opacity: 1;
+	padding: 1vh;
+
+}
+
+td.font {
+	font-size: 4vh;
+	font-weight: light;
+	font-family: "Verdana";
+	color: white;
+	text-align: center;
+	opacity: 1;
+}
+
+
+div.vertical {
+width: 3vh;
+height: 26vh;
+background: white;
+opacity: .4;
+	border: 0px solid red;
+}
+
+#horizontal1 {
+width: 26vh;
+height: 3vh;
+background: white;
+opacity: .4;
+border: 0px solid red;
+}
+
+#horizontal2 {
+width: 3vh;
+height: 3vh;
+background: white;
+opacity: .4;
+	border: 0px solid red;
+}
+
+#horizontal3 {
+width: 26vh;
+height: 3vh;
+background: white;
+opacity: .4;
+	border: 0px solid red;
+}

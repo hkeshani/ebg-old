@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
+
+<style>
+
+
+
+</style>
+</head>
+<body>
+
+<div id="imgcont">
+	<img  id="background" src="assets/learnpg.jpg" alt="Hollyhock" width="838" height="1280">
+
+	<div id="buttonsdiv">
+		<button id="play">></button>
+		<button id="pause">||</button>   
+	</div>
+
+	<div id="backbtn"></div>
+	<div id="title" class="maintitlevisible">Painting Gardens</div>
+	<div id="titlediv" class="titlevisible">Humay meets Princess Humayun<br>in a dream<br>Herat, Afghanistan, c. 1430<br>(60s)<br><br></div>
+	<div id="more" class="credits">CREDITS<br>MORE ABOUT THIS<br>ANOTHER ONE<br>SHARE</div>
+</div>   
+
+<audio id="audio1"><source src="assets/Humay_and_Humayun.mp3" type="audio/mpeg"></audio>
+
+<script>
+var playBtn = document.getElementById("play");
+var pauseBtn = document.getElementById("pause");
+var backBtn = document.getElementById("backbtn");
+var aud1 = document.getElementById('audio1');
+var pic1 = document.getElementById("picture1");
+var tl = new TimelineMax();
+var pop = Popcorn("#audio1");
+var index = 0;
+
+playBtn.onclick = function() {
+if (index == 0) {
+	index = 1;
+ 	title.classList.add('fade');
+ 	titlediv.classList.add('fade');
+	aud1.play();
+	pop.cue( 0.1, function() {tl.play();});
+ 	pop.cue( 60.31, function() {more.classList.add('appear');title.classList.add('appear');maintitle.classList.add('appear')});	
+	} 
+	else {
+	aud1.play();
+	tl.play();
+ 	pop.cue( 60.31, function() {more.classList.add('appear');title.classList.add('appear');titlediv.classList.add('appear');});	
+	};
+};
+
+pauseBtn.onclick = function() {
+	aud1.pause();
+	tl.pause();	
+};
+
+tl.pause();
+tl.add( TweenLite.to(pic1, 5.87, {scale:1}) );
+tl.add( TweenLite.to(pic1, 13.09, {scale:2.2, xPercent:-50, yPercent:-50}) );
+tl.add( TweenLite.to(pic1, 5.43, {xPercent:30}) );
+tl.add( TweenLite.to(pic1, 4.00, {xPercent:55, yPercent:60}) );
+tl.add( TweenLite.to(pic1, 7.10, {xPercent:55, yPercent:60}) );
+tl.add( TweenLite.to(pic1, 10.08, {xPercent:-60, yPercent:-0.5}) );
+tl.add( TweenLite.to(pic1, 5.32, {xPercent:-60, yPercent:-45}) );
+tl.add( TweenLite.to(pic1, 12.37, {scale:1, xPercent:0, yPercent:0 }) );
+
+backBtn.onclick = function() {
+    window.location.href = 'learnpaintinggardens.html';
+};
+
+</script>
+</body>
+</html>

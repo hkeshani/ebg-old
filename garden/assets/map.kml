@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>map7.kml</name>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<PolyStyle>
+			<color>ffffaa00</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<PolyStyle>
+			<color>ffffaa00</color>
+		</PolyStyle>
+	</Style>
+	<Folder id="results">
+		<name>Lake Country 1</name>
+		<open>3</open>
+
+<Placemark>
+		<name>Ambient</name>
+			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
+<a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<zone_type>ambient</zone_type>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							53.5186043,  -113.5286611
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>10000, 10000</rectangle>
+		</Placemark>
+<Placemark>
+
+		<name>SouthEast-Quad</name>
+			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
+<a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<zone_type>triggered</zone_type>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							53.526465, -113.521099
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>0.001,0.0005</rectangle>
+		</Placemark>
+
+<Placemark>
+		<name>NorthEast-Quad</name>
+			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
+<a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<zone_type>triggered</zone_type>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							53.527179, -113.521056
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>0.001,0.001</rectangle>
+		</Placemark>
+
+
+<Placemark>
+
+		<name>Pond-MiddleofQuad</name>
+			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
+<a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<zone_type>triggered</zone_type>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							53.526736, -113.521747
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>0.005,0.0005</rectangle>
+		</Placemark>
+
+
+
+
+
+<Placemark>
+
+		<name>Rutherford-FrontDoor</name>
+			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
+<a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<zone_type>triggered</zone_type>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							53.525875, -113.522132
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>0.001,0.001</rectangle>
+		</Placemark>
+
+<Placemark>
+
+		<name>BusinessBuilding-FrontDoor</name>
+			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
+<a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<zone_type>triggered</zone_type>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							53.527218, -113.521886
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>0.0001,0.0006</rectangle>
+		</Placemark>
+
+
+
+<Placemark>
+
+		<name>Boyan</name>
+			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
+<a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<zone_type>triggered</zone_type>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							53.462220, -113.598202
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>0.01,0.06</rectangle>
+		</Placemark>
+
+
+
+
+
+
+<Placemark>
+
+		<name>Zone1</name>
+			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
+<a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<zone_type>zone</zone_type>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							53.5259576,-113.5227775
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>0.006,0.006</rectangle>
+		</Placemark>
+
+
+<Placemark>
+
+		<name>Zone2</name>
+			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
+<a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<zone_type>zone</zone_type>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							53.5260117,-113.5216626
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>0.006,0.006</rectangle>
+		</Placemark>
+<Placemark>
+
+		<name>Zone3</name>
+			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
+<a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<zone_type>zone</zone_type>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							53.526354,-113.5216233
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>0.006,0.006</rectangle>
+		</Placemark>
+
+<Placemark>
+
+		<name>Zone4</name>
+			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
+<a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<zone_type>zone</zone_type>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							53.526354,-113.5216233
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>0.006,0.006</rectangle>
+		</Placemark>
+
+<Placemark>
+
+		<name>Zone5</name>
+			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
+<a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<zone_type>zone</zone_type>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							53.5267683,-113.5217229
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>0.006,0.006</rectangle>
+		</Placemark>
+
+<Placemark>
+
+		<name>Zone6</name>
+			<description><![CDATA[<img onload="document.getElementById('myLink').click()" src="https://lh3.googleusercontent.com/proxy/BBk23F_rpeEkbPaQDYVEmf-NeuwOBBtHRFFVk1Vke5whCktmecG73LZdT6LHwKcNznYsooVbvDTClV_AWfXB2oteJZsZZeG2PCreGlxO3A" height="200" width="auto" />
+<a id="myLink" href="ig8.html";>LINK 1</a>]]></description>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<zone_type>zone</zone_type>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							53.5267683,-113.5217229
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>0.006,0.006</rectangle>
+		</Placemark>
+
+		<Placemark>
+			<name>Zone7</name>
+			<styleUrl>#poly-000000-1200-77-nodesc</styleUrl>
+			<zone_type>zone</zone_type>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>
+							53.4881477,-113.5461688
+							53.4875413,-113.5459649
+							53.4869859,-113.5465765
+							53.4869986,-113.5430145
+							53.4882498,-113.5429931
+							53.4881477,-113.5461688
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>0.006,0.006</rectangle>
+		</Placemark>
+		<Placemark>
+			<name>Zone8</name>
+			<styleUrl>#poly-000000-1200-77-nodesc</styleUrl>
+			<zone_type>zone8</zone_type>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>
+							53.4869859, -113.5465765
+							53.486756, -113.5469198
+							53.485658, -113.5448813
+							53.4856963, -113.5430145
+							53.4869986, -113.5430145
+							53.4869859, -113.5465765
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>0.006,0.006</rectangle>
+		</Placemark>
+		<Placemark>
+			<name>Zone9</name>
+			<styleUrl>#poly-000000-1200-77-nodesc</styleUrl>
+			<zone_type>zone</zone_type>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>
+							53.4857091, -113.5423279
+							53.485658,-113.5448813
+							53.4847132, -113.5432506
+							53.4851218, -113.5425747
+							53.4857091, -113.5423279
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+			<rectangle>0.006,0.006</rectangle>
+		</Placemark>
+
+
+
+
+	</Folder>
+</Document>
+</kml>

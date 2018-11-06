@@ -1,0 +1,25 @@
+<html>
+<head>
+
+
+<script type="text/javascript" src="../js/mapper.js"></script>
+
+
+</head>
+
+<body>
+
+<h1>test</h1>
+
+<div id= "debug">
+
+
+
+
+</div>
+
+
+</body>
+
+
+</html>

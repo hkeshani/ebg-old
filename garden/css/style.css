@@ -1,0 +1,426 @@
+
+body {
+margin: 0;
+padding: 0;
+background: black;
+}
+
+/* Styles the menu */
+#menubar {
+position: fixed;
+top: 0vh;
+width: 100vw;
+height: 9vh;
+background: black;
+text-align: center;
+  border: 0px solid red;
+}
+
+#homebtn {
+	font-size: 6vh;
+	color: white;
+	text-align: center;
+	opacity: .3;
+	padding-top: 1.5vh;
+	padding-right: 4vh;
+    padding-left: 1vh;
+}
+
+#mapbtn {
+	font-size: 6vh;
+	color: white;
+	text-align: center;
+	opacity: .3;
+	padding-top: 1.5vh;
+	padding-right: 4vh;
+    padding-left: 4vh;
+}
+
+#fsbtn {
+	font-size: 6vh;
+	color: white;
+	text-align: center;
+	opacity: .3;
+	padding-top: 1.5vh;
+	padding-right: 4vh;
+    padding-left: 4vh;
+}
+
+#menubtn {
+	font-size: 6vh;
+	color: white;
+	text-align: center;
+	opacity: .3;
+	padding-top: 1.5vh;
+	padding-right: 1vh;
+    padding-left: 4vh;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+	top: 9vh;
+	right: 0vh;
+    background-color: black;
+    min-width: 160px;
+    overflow: auto;
+	opacity: .9;
+}
+
+.dropdown-content a {
+    color: white;
+	font-weight: bold;
+	font-family: "Verdana";
+	color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+background-color: gray
+}
+
+.show {
+display:block;
+}
+
+/* Styles the menu page headers */
+#labelcontbe {
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 9vh;
+	width: 100vw;
+	border: 0px solid red;
+		background: #004d00;
+	opacity: 0.7;
+}
+
+#labelcontad {
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 9vh;
+	width: 100vw;
+	border: 0px solid red;
+		background: #b30000;
+	opacity: 0.7;
+}
+
+#labelcontmp {
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 9vh;
+	width: 100vw;
+	border: 0px solid red;
+		background: #000080;
+	opacity: 0.6;
+}
+
+#labelcontiu {
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 9vh;
+	width: 100vw;
+	border: 0px solid red;
+		background: #4d004c;
+	opacity: 0.7;
+}
+
+#label {
+	width: 60vh;
+	border: 0px solid red;
+}
+
+.label {
+	font-size: 3vh;
+	font-weight: light;
+	font-family: "Verdana";
+	color: white;
+	text-align: center;
+	opacity: 1;
+	padding-top: 1vh;
+	padding-bottom: 1vh;	
+
+}
+
+#modulecont {
+
+position: fixed;
+bottom: 0vh;
+width: 100vw;
+border: 0px solid red;
+	background: black;
+	opacity: .6;
+}
+
+#moduletitle {
+	border: 0px solid red;
+
+}
+
+.moduletitle {
+	font-size: 5vh;
+	font-weight: light;
+	font-family: "Verdana";
+	color: white;
+	text-align: left;
+	opacity: 1;
+	padding-left: 1vh;
+	padding-right: 1vh;
+	padding-top: 0.5vh;
+
+}
+#moduleblurb {
+	border: 0px solid red;
+
+}
+
+.moduleblurb {
+	font-size: 3vh;
+	font-weight: light;
+	font-family: "Verdana";
+	color: #e5ffe5;
+	text-align: left;
+	opacity: 1;
+	padding-top: 1vh;
+	padding-bottom: 2vh;
+	padding-left: 1vh;
+	border: 0px solid red;
+
+}
+
+/* Styles the module pages */
+
+#allbtn {
+text-align: left;
+font-size: 4vh;
+	font-weight: light;
+	color: white;
+		opacity: .6;
+			padding-top: 1vh; 
+			padding-right: 1vh;
+			padding-left: 1vh;
+
+}
+
+img#background {
+   height: 100%;
+   width: 100%;
+   z-index: 2;
+}
+
+#link {
+position: fixed;
+top: 20vh;
+width: 100vw;
+height: 80vh;
+border: 0px solid red;
+}
+
+
+
+#morebtn {
+text-align: left;
+font-size: 4vh;
+	font-weight: light;
+	color: white;
+		opacity: .6;
+			padding-top: 1vh;
+padding-right: 1vh;			
+padding-left: 1vh;
+}
+
+#imgcont {
+   display: block;
+   margin: 0 auto;
+width: 65.6vh;
+height: 100vh;
+border: 0px solid red;
+overflow: hidden;
+}
+
+#imgcont img {
+   height: 100%;
+   width: 100%;
+   z-index: 2;
+}
+
+#buttonsdiv {
+	position: fixed;
+	z-index: 3;
+	width: 65.6vh;
+	text-align: center;
+	bottom: 1vh;
+	border: 0px solid red;
+	z-index: 3;
+}
+
+button {
+    width: 10vh;
+	height: 10vh;
+	cursor: pointer;
+	border: 0px;
+	border-radius:50%;
+	background: black;
+	opacity: .5;
+	font-size: 3.2vh;
+	font-weight: bold;
+	font-family: "Verdana";
+	color: white;
+	z-index: 3;
+	outline: none;
+}
+
+#backbtn {
+	position: fixed;
+	top: 0vh;
+	padding-top: 0vh;
+	padding-left: 1vw;
+	color: white;
+	font-size: 7vh;
+	font-weight: normal;
+	font-family: "Verdana";
+	z-index: 5;
+	opacity: .5;
+}
+
+.maintitlevisible {
+	position: fixed;
+	top: 9vh;
+	width: 65.6vh;
+	background: black;
+	opacity: .6;
+	font-size: 5vh;
+	font-family: "Verdana";
+	color: white;
+	text-align: center;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	z-index: 3;
+}
+
+.titlevisible {
+	position: fixed;
+	width: 65.6vh;
+	text-align: center;
+	top: 17vh;
+	background: black;
+	opacity: .6;
+	font-size: 3.2vh;
+	font-family: "Verdana";
+	color: white;
+	z-index: 3;
+	border: 0px solid red;
+	line-height: 150%;
+}
+
+.fade {
+	opacity: 0;
+	-webkit-transition: opacity 2s linear 0s;
+	transition: opacity 2s linear 0s;
+}
+
+.credits {
+	position: fixed;
+	bottom: 12vh;
+	text-align: center;
+	width: 65.6vh;
+	background: black;
+	opacity: 0;
+	font-size: 3.2vh;
+	font-family: "Verdana";
+	color: white;
+	z-index: 3;
+	border: 0px solid red;
+	line-height: 150%;
+}
+
+.appear {
+	opacity: .6;
+	-webkit-transition: opacity 2s linear 0s;
+	transition: opacity 2s linear 0s;
+}
+
+
+
+
+/* Styles the menu pages. Based on a template by Mark Lee @therealmarklee */
+
+.diy-slideshow{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+  border: 0px solid red;
+}
+
+figure{
+  position: fixed;
+  width: 100vw;
+  margin: 0;
+  opacity: 0;
+  transition: 2s opacity;
+  border: 0px solid red;
+}
+figcaption{
+  position: fixed;
+  font-family: sans-serif;
+  font-size: .8em;
+  bottom: .75em;
+  right: .35em;
+  padding: .25em;
+  color: #fff;
+  background: rgba(0,0,0, .25);
+  border-radius: 2px;
+  border: 0px solid red;
+}
+figcaption a{
+  color: #fff;
+}
+figure.show{
+  opacity: 1;
+  position: static;
+  transition: 2s opacity;
+}
+.next, .prev{
+  color: #fff;
+  position: fixed;
+  background: rgba(0,0,0, .6);
+  top: 50vh;
+  z-index: 1;
+  font-size: 4em;
+  margin-top: -.75em;
+  opacity: .7;
+  user-select: none;
+}
+.next:hover, .prev:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+.next{
+  right: 0vw;
+  padding: 10px 5px 15px 10px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border: 0px solid red;
+}
+.prev{
+  left: 0vw;
+  padding: 10px 10px 15px 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border: 0px solid red;
+}
+
+.trackDesc {
+
+    text-align:center;
+    margin-left:2em;
+    
+
+}

@@ -45,7 +45,15 @@ function contact() {
 function mapOfGarden(){
 
   //TODO on map pin click
-  alert("button is not yet implemented");
+  //alert("button is not yet implemented");
+  console.log("location button clicked");
+  navigator.geolocation.getCurrentPosition(function(position) {
+    console.log("success reloading page");
+    location.reload();
+    
+  }, function(error) {
+      console.log( error);
+  });
 
 
 };
@@ -70,7 +78,7 @@ function tour(){
 
 function reflect(){
 
-  location.href ="menureflect.html","_self";
+  location.href ="reflect.html","_self";
 
 
 };

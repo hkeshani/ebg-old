@@ -1,0 +1,114 @@
+body {
+	display: flex;
+	justify-content: center;
+	background: white;
+
+
+}
+
+#displayName{
+	position: fixed;
+	left: 0vw;
+	width: 100vw;
+	bottom: 0vh;
+	padding: 0px;
+	color: #f06; 
+	background-color: #eee;
+	text-align: center;	
+	font-family: helvetica, arial, sans-serif;
+	font-weight: bold;
+	border: 0px solid green;
+	z-index: 5;
+	opacity: .6;
+	}
+	
+#displayDescription{
+	border: 0px solid red;
+	z-index: 5;
+	}
+
+
+#counter, 
+#currentpos, 
+#debugoutput{
+	display:none;
+	}
+
+#imagediv {
+	width: 68.3vh;
+	height: 100vh;
+	border: 0px solid red;
+	z-index: 2;
+	overflow: hidden;
+}
+
+#imagediv img {
+   height: 100%;
+   width: 100%;
+   z-index: 3;
+}
+
+#spotdiv {
+	width: 68.3vh;
+	height: 100vh;
+	border: 0px solid red;
+	z-index: 2;
+}
+
+#spot {
+position: fixed;
+top: 80vh;
+left: 50%;
+color: red;
+font-size: 6vh;
+border: 0px solid red;
+z-index: 2;
+}
+
+#backbtn {
+position: fixed;
+top: 0vh;
+padding-top: 0vh;
+padding-left: 1vw;
+color: white;
+font-size: 7vh;
+font-weight: normal;
+	font-family: "Verdana";
+	z-index: 3;
+	opacity: .5;
+	border: 0px solid red;
+}
+
+#title {
+position: fixed;
+top: 0vh;
+width: 68.3vh;
+background: black;
+opacity: .5;
+font-size: 5vh;
+font-family: "Verdana";
+color: white;
+text-align: center;
+padding-top: 1vh;
+padding-bottom: 1vh;
+z-index: 2;
+border: 0px solid red;
+}
+
+
+
+#instructions {
+position: fixed;
+width: 62.4vh;
+height: 95vh;
+top: 10vh;
+background: black;
+opacity: .5;
+padding: 3vh;
+color: white;
+text-align: center;
+font-size: 4vh;
+font-family: "Verdana";
+z-index: 4;
+border: 0px solid red;
+}
